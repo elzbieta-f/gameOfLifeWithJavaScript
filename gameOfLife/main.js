@@ -1,10 +1,5 @@
-// const field = [
-//     ['.', '.', '.', '.', '.', '.', '.', '.'],
-//     ['.', '.', 'X', 'X', 'X', '.', '.', '.'],
-//     ['.', '.', 'X', '.', '.', 'X', '.', '.'],
-//     ['.', '.', '.', 'X', 'X', 'X', '.', '.'],
-//     ['.', '.', '.', '.', '.', '.', '.', '.']
-// ];
+//creating random start array
+
 function createField(plotis, ilgis) {
     let field = new Array(plotis);
     for (let i = 0; i < field.length; i++) {
@@ -16,12 +11,14 @@ function createField(plotis, ilgis) {
     }
     return field;
 }
+
 const field = createField(10, 30);
 
 function printStartArray() {
     const start = document.getElementById("start");
     start.appendChild(arrayToTable(field));
 }
+
 function arrayToTable(array) {
     const table = document.createElement("table");
     for (const mas of array) {
@@ -36,6 +33,7 @@ function arrayToTable(array) {
     return table;
 }
 
+//This part for printing all iterations on the HTML document
 
 // function run() {
 //     let iterSk = +prompt("Įveskite iteracijų skaičių");
@@ -130,6 +128,9 @@ function arrayToTable(array) {
 //     }
 
 // }
+
+
+//This part is for printing each iteration for one second, stops after iteration is repeated with any previous iteration
 
 function cleanElement(el) {
     while (el.firstChild) {
